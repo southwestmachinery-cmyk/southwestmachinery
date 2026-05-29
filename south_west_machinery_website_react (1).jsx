@@ -1,0 +1,309 @@
+export default function SouthWestMachineryWebsite() {
+  const featuredMachines = [
+    {
+      name: 'SWM Mini Excavator 1.8T',
+      image:
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop',
+      description: 'Compact, powerful and ideal for landscaping, utilities and construction projects.',
+    },
+    {
+      name: 'SWM Skid Steer Loader',
+      image:
+        'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1600&auto=format&fit=crop',
+      description: 'Heavy-duty lifting and handling performance built for UK job sites.',
+    },
+    {
+      name: 'SWM Site Dumper',
+      image:
+        'https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop',
+      description: 'Reliable hauling solutions engineered for efficiency and durability.',
+    },
+  ];
+
+  const services = [
+    'Nationwide Delivery',
+    'Finance Available',
+    'Trade-In Options',
+    'Parts & Servicing',
+    'Warranty Support',
+    'Used Machinery Stock',
+  ];
+
+  return (
+    <div className="bg-white text-black min-h-screen font-sans">
+      <header className="border-b border-zinc-200 sticky top-0 bg-white/90 backdrop-blur z-50">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-black tracking-wide uppercase">
+              South West Machinery
+            </h1>
+            <p className="text-zinc-600 text-sm">
+              Heavy Equipment Sales & Support
+            </p>
+          </div>
+
+          <nav className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-wide">
+            <a href="#machines" className="hover:text-yellow-400 transition">
+              Machinery
+            </a>
+            <a href="#services" className="hover:text-yellow-400 transition">
+              Services
+            </a>
+            <a href="#about" className="hover:text-yellow-400 transition">
+              About
+            </a>
+            <a href="#contact" className="hover:text-yellow-400 transition">
+              Contact
+            </a>
+          </nav>
+
+          <button className="bg-yellow-400 text-black px-5 py-3 rounded-2xl font-bold hover:scale-105 transition">
+            Request Quote
+          </button>
+        </div>
+      </header>
+
+      <section
+        className="relative h-[85vh] flex items-center"
+        style={{
+          backgroundImage:
+            'url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000&auto=format&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <div className="inline-block bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wide mb-6">
+              Built For UK Worksites
+            </div>
+
+            <h2 className="text-5xl md:text-7xl font-black leading-tight uppercase mb-6">
+              Industrial Machinery You Can Depend On
+            </h2>
+
+            <p className="text-xl text-zinc-200 leading-relaxed mb-10">
+              South West Machinery supplies reliable excavators, loaders,
+              dumpers and site equipment for construction, landscaping,
+              agriculture and infrastructure projects across the UK.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-yellow-400 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">
+                View Machinery
+              </button>
+
+              <button className="border border-black px-8 py-4 rounded-2xl font-bold text-lg hover:bg-black hover:text-white transition">
+                Speak To Sales
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-zinc-100" id="machines">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p className="uppercase tracking-[0.3em] text-yellow-400 font-semibold mb-3 text-sm">
+                Featured Equipment
+              </p>
+              <h3 className="text-4xl md:text-5xl font-black uppercase">
+                Machinery Range
+              </h3>
+            </div>
+
+            <p className="max-w-2xl text-zinc-600 text-lg leading-relaxed">
+              From compact excavators to heavy-duty site equipment, our
+              machinery is selected for durability, efficiency and real-world
+              performance.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredMachines.map((machine) => (
+              <div
+                key={machine.name}
+                className="bg-white rounded-3xl overflow-hidden border border-zinc-200 hover:border-yellow-400 transition duration-300 group"
+              >
+                <div className="overflow-hidden h-72">
+                  <img
+                    src={machine.image}
+                    alt={machine.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+
+                <div className="p-8">
+                  <h4 className="text-2xl font-black uppercase mb-4">
+                    {machine.name}
+                  </h4>
+
+                  <p className="text-zinc-600 leading-relaxed mb-6">
+                    {machine.description}
+                  </p>
+
+                  <button className="bg-yellow-400 text-black px-5 py-3 rounded-xl font-bold hover:scale-105 transition">
+                    Get Pricing
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24" id="services">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="uppercase tracking-[0.3em] text-yellow-400 font-semibold mb-3 text-sm">
+              Why Choose Us
+            </p>
+
+            <h3 className="text-4xl md:text-5xl font-black uppercase mb-8 leading-tight">
+              Trusted Machinery Specialists Across The UK
+            </h3>
+
+            <p className="text-zinc-600 text-lg leading-relaxed mb-10">
+              We provide dependable machinery, responsive support and tailored
+              solutions for contractors, builders and agricultural businesses.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {services.map((service) => (
+                <div
+                  key={service}
+                  className="bg-zinc-100 border border-zinc-200 rounded-2xl px-5 py-5 font-semibold"
+                >
+                  {service}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1600&auto=format&fit=crop"
+              alt="Construction machinery"
+              className="rounded-3xl shadow-2xl object-cover h-[650px] w-full"
+            />
+
+            <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur rounded-2xl px-8 py-6 border border-zinc-700">
+              <div className="text-5xl font-black text-yellow-400">10+</div>
+              <div className="text-zinc-300 uppercase tracking-wide text-sm mt-1">
+                Years Industry Experience
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-yellow-400 text-black" id="about">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="uppercase tracking-[0.3em] font-bold mb-4 text-sm">
+            About South West Machinery
+          </p>
+
+          <h3 className="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight">
+            Delivering Reliable Equipment For Serious Work
+          </h3>
+
+          <p className="max-w-4xl mx-auto text-xl leading-relaxed mb-10">
+            South West Machinery is committed to supplying high-quality
+            machinery with honest advice, dependable aftersales support and
+            competitive finance solutions.
+          </p>
+
+          <button className="bg-black text-black px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">
+            Learn More
+          </button>
+        </div>
+      </section>
+
+      <section className="py-24" id="contact">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <p className="uppercase tracking-[0.3em] text-yellow-400 font-semibold mb-3 text-sm">
+              Contact Us
+            </p>
+
+            <h3 className="text-4xl md:text-5xl font-black uppercase mb-8">
+              Request A Quote Today
+            </h3>
+
+            <p className="text-zinc-600 text-lg leading-relaxed mb-10">
+              Tell us what equipment you need and our team will help you find
+              the right solution for your project.
+            </p>
+
+            <div className="space-y-5 text-lg">
+              <div>
+                <span className="font-bold text-black">Phone:</span>{' '}
+                <span className="text-zinc-600">01234 567890</span>
+              </div>
+
+              <div>
+                <span className="font-bold text-black">Email:</span>{' '}
+                <span className="text-zinc-600">
+                  southwestmachinery@gmail.com
+                </span>
+              </div>
+
+              <div>
+                <span className="font-bold text-black">Location:</span>{' '}
+                <span className="text-zinc-600">United Kingdom</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-zinc-100 border border-zinc-200 rounded-3xl p-8">
+            <form className="space-y-6">
+              <div>
+                <label className="block mb-2 text-sm uppercase tracking-wide text-zinc-600">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full bg-white border border-zinc-700 rounded-xl px-5 py-4 focus:outline-none focus:border-yellow-400"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm uppercase tracking-wide text-zinc-600">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  className="w-full bg-white border border-zinc-700 rounded-xl px-5 py-4 focus:outline-none focus:border-yellow-400"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm uppercase tracking-wide text-zinc-600">
+                  Machinery Required
+                </label>
+                <textarea
+                  rows="5"
+                  className="w-full bg-white border border-zinc-700 rounded-xl px-5 py-4 focus:outline-none focus:border-yellow-400"
+                  placeholder="Tell us what equipment you're looking for"
+                />
+              </div>
+
+              <button className="w-full bg-yellow-400 text-black px-6 py-4 rounded-2xl font-black text-lg hover:scale-[1.02] transition">
+                Submit Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-zinc-200 py-10 text-center text-zinc-500 text-sm">
+        © 2026 South West Machinery. All rights reserved.
+      </footer>
+    </div>
+  );
+}
